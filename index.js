@@ -25,13 +25,13 @@ let theSimpsons = {
 *  .keys()
     - Details all the keys available within the object as an array.
 */
-
+// console.log(Object.keys(theSimpsons));
 
 /* 
 *  .values()
     - returns an array of values
 */
-
+// console.log(Object.values(theSimpsons));
 
 /* 
 *  Object.assign()
@@ -49,11 +49,18 @@ let theSimpsons = {
     }
 */
 
+let futurama = Object.assign(theSimpsons);
+// console.log('Futurama: ', futurama);
+
 
 /* 
 *  delete object.key
 */
 
+futurama.currently_running = false;
+console.log("BEFORE: ", Object.keys(futurama));
+delete futurama.currently_running;
+console.log("AFTER: ", Object.keys(futurama));
 
 
 
